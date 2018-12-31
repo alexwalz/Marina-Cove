@@ -14,7 +14,7 @@ const Footer = ()=>{
 
                 <Grid.Column width={8} verticalAlign='middle' >
                     <div style={{verticalAlign: "middle"}}>
-                        <h1 style={{color: "white"}}>Marina Cove</h1>
+                        <h1 style={{color: "white", fontSize: "3rem"}}>Marina Cove</h1>
                         <div style={{paddingBottom: "20px", color: "white", fontWeight: "bold"}}>
                             <p>22 East 1500 South</p>
                             <p>American Fork, UT 84003</p>
