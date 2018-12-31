@@ -23,7 +23,7 @@ class Event extends Component {
             currentComponent.setState({user: response.data.authenticatedUser.id}, function(){
 
                 axios.get('/api/vehicles/purchase/'+ this.props.event.vehicleId ).then(function(response){
-                    currentComponent.setState({vehicle: response.data, update: true},function(){console.log(this.state)})
+                    currentComponent.setState({vehicle: response.data, update: true})
                 }).catch(function(err){
                     console.log(err)
                 })
@@ -44,8 +44,6 @@ class Event extends Component {
    completeEvent=()=>{
 
         axios.put('/api/purchases/'+ this.props.event._id, {complete: true, completed_by: this.state.user} ).then(function(response){
-            console.log(response)
-
             if(response.status === 200){
                 window.location.reload()
             }

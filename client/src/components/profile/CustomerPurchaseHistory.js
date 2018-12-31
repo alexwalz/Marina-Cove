@@ -15,8 +15,6 @@ class CustomerPurchaseHistory extends Component {
 
     componentDidMount=(props)=>{
 
-        console.log(this.props)
-
         let currentComponent = this
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
         axios.get('/api/users/authenticate').then(function(response){

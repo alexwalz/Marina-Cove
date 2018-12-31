@@ -106,7 +106,7 @@ class PaypalButton extends Component {
                 }
 
                 axios.post('/api/purchases', payload).then(function(response){
-                    console.log(response)
+                    console.log("Done")
                 })
             });
         }

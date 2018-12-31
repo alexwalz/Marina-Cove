@@ -26,7 +26,7 @@ class ServicesView extends Component {
 
             currentComponent.setState({user: response.data.authenticatedUser.id}, function(){
                 axios.get('/api/services').then(function(response){
-                    currentComponent.setState({services: response.data, update: true},function(){console.log(this.state)})
+                    currentComponent.setState({services: response.data, update: true})
                 }).catch(function(err){
                     console.log(err)
                 })
@@ -65,7 +65,6 @@ class ServicesView extends Component {
                         <Grid columns={3}>
                             <Grid.Row>
                                 {this.state.update ? this.state.services.map(service=>{
-                                    console.log(service)
                                     return(
                                         <Grid.Column style={{paddingTop: "20px"}} >
                                             <Service service={service} serviceName={service.serviceName} price={service.price} discounted={service.discount} discountedPrice={service.discountPrice} _id={service._id}/>

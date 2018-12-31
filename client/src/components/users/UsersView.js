@@ -43,9 +43,7 @@ class UsersView extends Component {
 
 
     updateSearch=(event)=>{
-        this.setState({search: event.target.value.substr(0,20).toLowerCase(), function(){
-            console.log(this.state.search)
-        }})
+        this.setState({search: event.target.value.substr(0,20).toLowerCase()})
     }
 
     render() {

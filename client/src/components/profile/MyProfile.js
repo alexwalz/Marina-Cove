@@ -99,7 +99,6 @@ class UserProfile extends Component {
 
         if(this.state.password === this.state.confirmPassword){
             axios.put('/api/users/password/'+this.state.authUser.id, {password: this.state.password}).then(function(response){
-                console.log(response)
                 if(response.data.success){
                     currentComponent.setState({changePassword: false, passwordError: false, passwordErrorMessage: ''})
                 }else{

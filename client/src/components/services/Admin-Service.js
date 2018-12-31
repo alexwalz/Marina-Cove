@@ -42,14 +42,12 @@ class Service extends Component {
 
     update=()=>{
         axios.put('/api/services/'+this.props._id, this.state.service).then(function(response){
-            console.log(response)
             window.location.reload()
         })
     }
 
     delete=()=>{
         axios.delete('/api/services/'+this.props._id).then(function(response){
-            console.log(response)
             window.location.reload()
         })
     }
@@ -62,7 +60,6 @@ class Service extends Component {
             },
         }), function(){
             axios.put('/api/services/'+this.props._id, this.state.service).then(function(response){
-                console.log(response)
                 window.location.reload()
             })
         });
@@ -77,7 +74,6 @@ class Service extends Component {
             },
         }), function(){
             axios.put('/api/services/'+this.props._id, this.state.service).then(function(response){
-                console.log(response)
                 window.location.reload()
             })
         });

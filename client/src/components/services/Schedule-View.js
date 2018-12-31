@@ -26,8 +26,7 @@ class ScheduleView extends Component {
             currentComponent.setState({user: response.data.authenticatedUser.id}, function(){
 
                 axios.get('/api/purchases').then(function(response){
-                    console.log(response.data)
-                    currentComponent.setState({schedule: response.data, update: true},function(){console.log(this.state)})
+                    currentComponent.setState({schedule: response.data, update: true})
                 }).catch(function(err){
                     console.log(err)
                 })

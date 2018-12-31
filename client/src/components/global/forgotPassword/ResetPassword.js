@@ -28,7 +28,6 @@ class ResetPassword extends Component {
 
         this.setState({passwordHash: this.props.match.params.id}, function(){
           axios.get('/api/users/verify-hash/'+this.state.passwordHash).then(function(response){
-            console.log(response)
             if(!response.data.success){
               window.location = '/expired-link'
             }else{
@@ -57,7 +56,6 @@ class ResetPassword extends Component {
 
         axios.post('/api/users/password-reset/'+this.state.passwordHash, {password: this.state.password}).then(function(response){
           
-          console.log(response)
           if(response.data.success){
             window.location = '/login'
           }else{

@@ -87,8 +87,6 @@ class LoginForm extends Component {
 
         this.setState({
             submitting: true
-        }, function(){
-            console.log(this.state)
         })
 
         axios.post('api/auth/signup', this.state)

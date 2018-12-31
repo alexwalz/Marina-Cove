@@ -18,9 +18,7 @@ export default class Navigation extends Component {
     axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
 
     axios.get('/api/users/authenticate').then(function(response){
-      currentComponent.setState({authUser: response.data.authenticatedUser, update: true, authenticated: true}, function(response){
-        console.log(this.state)
-      })
+      currentComponent.setState({authUser: response.data.authenticatedUser, update: true, authenticated: true})
     }).catch(function(err){
       console.log(err)
       

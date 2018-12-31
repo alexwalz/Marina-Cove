@@ -26,7 +26,7 @@ class CustomerView extends Component {
 
             currentComponent.setState({user: response.data.authenticatedUser.id}, function(){
                 axios.get('/api/services').then(function(response){
-                    currentComponent.setState({services: response.data, update: true},function(){console.log(this.state)})
+                    currentComponent.setState({services: response.data, update: true})
                 }).catch(function(err){
                     console.log(err)
                 })

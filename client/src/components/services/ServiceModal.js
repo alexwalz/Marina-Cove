@@ -45,10 +45,7 @@ export default class ServiceModal extends Component {
 
     }
 
-    
-    test=(event)=>{
-        console.log(event.target)
-    }
+
 
     onOpenModal = () => {
     this.setState({ open: true });
@@ -63,7 +60,7 @@ export default class ServiceModal extends Component {
         this.setState((prevState, props) => ({
                 ...prevState.newService,
                 [name]: value,
-        }), function(){console.log(this.state)});
+        }));
     }
       
     

@@ -22,7 +22,6 @@ class ConfirmPage extends Component {
         let currentComponent = this
 
         axios.get('/api/confirm/'+hash).then(function(response){
-            console.log(response)
             if(response.data.confirm){
                 currentComponent.setState({message: 'Your Email has been verified.  You are now able to login!'})
             }

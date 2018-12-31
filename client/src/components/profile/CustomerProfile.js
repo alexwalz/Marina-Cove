@@ -31,7 +31,7 @@ class UserProfile extends Component {
             currentComponent.setState({authenticatedUser: response.data.authenticatedUser})
 
             if(response.data.authenticatedUser.id === _id){
-                currentComponent.setState({myProfile: true}, function(){console.log(this.state)})
+                currentComponent.setState({myProfile: true})
             }
 
             if(response.data.authenticatedUser.role !== 'admin'){
@@ -71,7 +71,6 @@ enableCaptainsClub=()=>{
 
     let currentComponent = this
     axios.put('/api/users/'+this.props.match.params.id, {captainsClub: true}).then(function(response){
-        console.log(response)
         if(response.status === 200){
             currentComponent.setState((prevState, props) => ({
                 user: {
@@ -87,7 +86,6 @@ updateRole=(event, {value})=>{
 
     let currentComponent = this
     axios.put('/api/users/'+this.props.match.params.id, {role: value}).then(function(response){
-        console.log(response)
         if(response.status === 200){
             currentComponent.setState((prevState, props) => ({
                 user: {
@@ -103,7 +101,6 @@ disableCaptainsClub=()=>{
 
     let currentComponent = this
     axios.put('/api/users/'+this.props.match.params.id, {captainsClub: false}).then(function(response){
-        console.log(response)
         if(response.status === 200){
             currentComponent.setState((prevState, props) => ({
                 user: {
