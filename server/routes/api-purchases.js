@@ -42,7 +42,7 @@ router.get('/user/:id', function (req, res) {
 router.put('/:id', passport.authenticate('jwt', { session: false}), function(req, res) {
     var token = getToken(req.headers);
     if (token) {
-        if(req.user.role === 'admin'){
+        if(req.user.role === 'admin' || req.user.role === 'employee'){
             purchasesController.update(req, res)
         }else{
             res.json({success: false, message: "Unauthorized"})

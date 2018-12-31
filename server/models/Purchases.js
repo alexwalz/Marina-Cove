@@ -18,7 +18,15 @@ var PurchasesSchema = new Schema({
         vehicleId: String,
         serviceId: String,
         serviceName: String,
-        price: String
+        price: String, 
+        complete: {
+                type: Boolean,
+                default: false
+              },
+        completed_by: {
+                type: String,
+                default: null
+              },
 });
 
 

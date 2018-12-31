@@ -47,6 +47,19 @@ router.get('/', passport.authenticate('jwt', { session: false}), function(req, r
     }
 })
 
+router.put('/:id', passport.authenticate('jwt', { session: false}), function(req, res) {
+    var token = getToken(req.headers);
+    if (token) {
+        if(req.user.role === 'admin' || req.user.role === 'employee'){
+            vehiclesController.update(req, res)
+        }else{
+            res.json({success: false, message: "Unauthorized"})
+        }
+    }else{
+        res.json({success: false, message: "Not Authenticated"})
+    }
+})
+
 router.post('/', passport.authenticate('jwt', { session: false}), function(req, res) {
     var token = getToken(req.headers);
     if (token) {

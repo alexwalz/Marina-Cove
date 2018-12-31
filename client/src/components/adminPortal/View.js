@@ -4,6 +4,7 @@ import axios from 'axios'
 import UsersView from '../users/UsersView'
 import VehiclesView from '../vehicles/VehiclesView'
 import ServicesView from '../services/Admin-View'
+import ScheduleView from '../services/Schedule-View'
 import { Icon, Menu } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 // eslint-disable-next-line 
@@ -81,6 +82,19 @@ class AdminView extends Component {
                   :null
                 }
 
+                { this.state.updated ? 
+                    this.state.authUser.role === 'admin' || this.state.authUser.role === 'employee' ?
+
+                    <Link to='/profile/admin/schedule'>
+                        <Menu.Item name='schedule' active={activeItem === 'schedule'} onClick={this.handleItemClick}>
+                        <Icon name='calendar' />Schedule</Menu.Item>
+                    </Link>
+
+                    : null
+                  :null
+                }
+
+
                 </Menu>
 
 
@@ -89,6 +103,7 @@ class AdminView extends Component {
                         <Route path="/profile/admin/users" component={UsersView} />
                         <Route path="/profile/admin/vehicles" component={VehiclesView} />
                         <Route path="/profile/admin/services" component={ServicesView} />
+                        <Route path="/profile/admin/schedule" component={ScheduleView} />
                     </Switch>
                 </div>
 
