@@ -140,7 +140,7 @@ class UserProfile extends Component {
         return(
             <div>
                     <div>
-                        <div style={{background: `url(${background})`, padding: "15px"}}>
+                        <div style={{background: `url(${background})`, padding: "15px", border: '3px solid lightgrey'}}>
                             <Header as='h2' icon textAlign='center'>
                                 <Icon name='user' circular style={{color: "#EF1B36"}}/>
                                 <Header.Content>{this.state.authUser.firstName + ' ' + this.state.authUser.lastName}</Header.Content>

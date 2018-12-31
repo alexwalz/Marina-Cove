@@ -74,8 +74,8 @@ class AdminView extends Component {
                     this.state.authUser.role === 'admin' || this.state.authUser.role === 'employee' ?
 
                     <Link to='/profile/admin/services'>
-                        <Menu.Item name='balance scale' active={activeItem === 'balance scale'} onClick={this.handleItemClick}>
-                        <Icon name='balance scale' />Services</Menu.Item>
+                        <Menu.Item name='dollar sign' active={activeItem === 'dollar sign'} onClick={this.handleItemClick}>
+                        <Icon name='dollar sign' />Paid Services</Menu.Item>
                     </Link>
 
                     : null

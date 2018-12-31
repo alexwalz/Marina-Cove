@@ -51,7 +51,7 @@ class LeftSidebar extends Component {
                     Logout
                 </Menu.Item>
 
-                {this.state.authUser.role === 'admin' ? 
+                {this.state.authUser.role === 'admin' || this.state.authUser.role === 'employee' ? 
 
                     <Link to='/profile/admin/users'><Menu.Item as='a' >
                         <Label as='a' color='teal' ribbon style={{position: "absolute", marginLeft: "33px"}}>

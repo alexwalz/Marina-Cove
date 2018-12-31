@@ -159,7 +159,7 @@ deleteUser =()=>{
                     
                     <div>
 
-                        <div style={{padding: "0 0 80px 0", background: `url(${background})`, padding: "15px"}}>
+                        <div style={{padding: "0 0 80px 0", background: `url(${background})`, padding: "15px",  borderTop: '3px solid lightgrey', borderRight: '3px solid lightgrey', borderLeft: '3px solid lightgrey'}}>
 
                             <Button.Group>
 
@@ -202,7 +202,7 @@ deleteUser =()=>{
                         </div>
 
                         <div>
-                            <div style={{background: `url(${background})`, paddingBottom: "25px"}}>
+                            <div style={{background: `url(${background})`, paddingBottom: "25px", borderBottom: '3px solid lightgrey', borderRight: '3px solid lightgrey', borderLeft: '3px solid lightgrey'}}>
                                 <Header as='h2' icon textAlign='center'>
                                     <Icon name='user' circular style={{color: "#EF1B36"}}/>
                                     <Header.Content>{this.state.user.firstName + ' ' + this.state.user.lastName}</Header.Content>
@@ -210,7 +210,7 @@ deleteUser =()=>{
                                 </Header>
                             </div>
 
-                            <Grid columns={3} centered divided style={{marginTop: "60px"}}>
+                            <Grid columns={4} centered divided style={{marginTop: "60px"}}>
                                 <Grid.Row> 
 
                                     <Grid.Column>
@@ -243,6 +243,17 @@ deleteUser =()=>{
                                             </Header.Content>
                                         </Header>
                                     </Grid.Column>
+
+                                    <Grid.Column>
+                                        <Header as='h2'>
+                                            <Icon name='user' />
+                                            <Header.Content>
+                                                Username
+                                            <Header.Subheader>{this.state.user.username}</Header.Subheader>
+                                            </Header.Content>
+                                        </Header>
+                                    </Grid.Column>
+
                                 </Grid.Row>
                             </Grid>
                         </div>

@@ -69,7 +69,7 @@ class Event extends Component {
 
                     <Statistic>
                         <Statistic.Value>
-                            <Icon name='calendar' inline />
+                            <Icon name='calendar' inline style={{color: "#1CB4AC"}}/>
                         </Statistic.Value>
                         <Statistic.Label>{this.props.event.scheduledDate.slice(0,10)}</Statistic.Label>
                     </Statistic>
@@ -85,14 +85,14 @@ class Event extends Component {
 
                     <Statistic>
                         <Statistic.Value>
-                            <Icon name='dollar sign' />
+                            <Icon name='dollar sign' style={{color: "#1CB4AC"}}/>
                             {this.props.event.price}
                         </Statistic.Value>
                     </Statistic>
 
                     <Statistic>
                         <Statistic.Value>
-                            <Icon name='user' inline />
+                            <Icon name='user' inline style={{color: "#1CB4AC"}}/>
                         </Statistic.Value>
                         <Statistic.Label>{this.props.event.firstName} {this.props.event.lastName}</Statistic.Label>
                     </Statistic>
@@ -107,7 +107,7 @@ class Event extends Component {
 
                     <Statistic>
                         <Statistic.Value>
-                            <Icon name='car' inline />
+                            <Icon name='car' inline style={{color: "#1CB4AC"}}/>
                         </Statistic.Value>
                         <Statistic.Label>{this.state.vehicle.make} {this.state.vehicle.model}</Statistic.Label>
                     </Statistic>
