@@ -59,7 +59,7 @@ class Event extends Component {
     render(props) {
 
       return ( 
-        <div style={{padding: "10px"}}>
+        <div style={{paddingTop: "5px"}}>
             {this.state.update ? 
 
             <Segment>

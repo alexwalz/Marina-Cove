@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { Message} from 'semantic-ui-react'
+import { Message, Accordion, Icon, Header} from 'semantic-ui-react'
 import React, { Component} from 'react'
 import './styles.css'
 import axios from 'axios'
@@ -13,9 +13,19 @@ class ScheduleView extends Component {
             user: "",
             update: false,
             error: false,
+            search: "",
             schedule: {},
+            activeIndex: 1
 		}
     }
+
+    handleClick = (e, titleProps) => {
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const newIndex = activeIndex === index ? -1 : index
+    
+        this.setState({ activeIndex: newIndex })
+      }
 
     componentDidMount=()=>{
 
@@ -40,6 +50,10 @@ class ScheduleView extends Component {
 
     }
 
+    updateSearch=(event)=>{
+        this.setState({search: event.target.value.substr(0,20).toLowerCase()})
+    }
+
     errorMessage = () => {
         return(
            <Message negative>
@@ -57,21 +71,74 @@ class ScheduleView extends Component {
 
     render() {
 
+        const { activeIndex } = this.state
+
+        let filteredEvents;
+
+        if(this.state.update){
+
+            filteredEvents = this.state.schedule.filter(
+                (event)=>{
+                    let fullName = event.firstName + ' ' + event.lastName
+                    console.log(fullName)
+                    return(
+                        fullName.toLowerCase().indexOf(this.state.search) !== -1
+                    )
+                }
+            )
+        }
+
       return ( 
         
             <div>
+
 
                 {this.state.update ?
 
                 this.state.schedule.map(event=>{
                     return(
+                        !event.complete ?
+                        <Accordion.Content active={activeIndex === 0}>
+                            <CalendarEvent event = {event} />
+                        </Accordion.Content>
 
-                        <CalendarEvent event = {event} />
+                        : null
                     )
                 })
-                
+
 
                 :null }
+
+                <Accordion style={{marginTop: "20px"}}>
+                    <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
+                    <Icon name='check' circular/>
+                        <span style={{fontSize: '1.5rem', paddingLeft: "5px", color: "#1CB4AC"}}>Completed Events</span>
+                    </Accordion.Title>
+
+                    {/* <Accordion.Content> */}
+                        {this.state.activeIndex === 0 ?
+                        <div style={{position: "relative", padding: "20px 0px 30px 0px"}}><input style={{border: "1px solid #1CB4AC"}} placeholder='Customer Name' className='user-search-bar' type='text' value={this.state.search} onChange={this.updateSearch.bind(this)} /> <Icon disabled name='search' className='searchIcon' /></div>
+                        : null }
+                        {/* </Accordion.Content> */}
+
+                    {this.state.update ?
+
+                    filteredEvents.map(event=>{
+                            return(
+                                event.complete ?
+                                <Accordion.Content active={activeIndex === 0}>
+                                    <CalendarEvent event = {event} />
+                                </Accordion.Content>
+
+                                : null
+                            )
+                        })
+
+
+                        :null }
+
+                </Accordion>
+
 
             </div>
         )
