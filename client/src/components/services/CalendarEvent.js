@@ -68,40 +68,48 @@ class Event extends Component {
                 <Statistic.Group>
 
                     <Statistic>
-                    <Statistic.Value text>
-                        Service<br />
-                        Purchased
-                    </Statistic.Value>
-                    <Statistic.Label>{this.props.event.serviceName}</Statistic.Label>
+                        <Statistic.Value>
+                            <Icon name='calendar' inline />
+                        </Statistic.Value>
+                        <Statistic.Label>{this.props.event.scheduledDate.slice(0,10)}</Statistic.Label>
+                    </Statistic>
+
+
+                    <Statistic>
+                        <Statistic.Value text>
+                            Service<br />
+                            Purchased
+                        </Statistic.Value>
+                        <Statistic.Label>{this.props.event.serviceName}</Statistic.Label>
                     </Statistic>
 
                     <Statistic>
-                    <Statistic.Value>
-                        <Icon name='dollar sign' />
-                        {this.props.event.price}
-                    </Statistic.Value>
+                        <Statistic.Value>
+                            <Icon name='dollar sign' />
+                            {this.props.event.price}
+                        </Statistic.Value>
                     </Statistic>
 
                     <Statistic>
-                    <Statistic.Value>
-                        <Icon name='user' inline />
-                    </Statistic.Value>
-                    <Statistic.Label>{this.props.event.firstName} {this.props.event.lastName}</Statistic.Label>
+                        <Statistic.Value>
+                            <Icon name='user' inline />
+                        </Statistic.Value>
+                        <Statistic.Label>{this.props.event.firstName} {this.props.event.lastName}</Statistic.Label>
                     </Statistic>
 
                     <Statistic>
-                    <Statistic.Value text>
-                        Vehicle<br />
-                        Type
-                    </Statistic.Value>
-                    <Statistic.Label>{this.state.vehicle.make} {this.state.vehicle.model}</Statistic.Label>
+                        <Statistic.Value text>
+                            License<br />
+                            Plate
+                        </Statistic.Value>
+                        <Statistic.Label>{this.state.vehicle.license}</Statistic.Label>
                     </Statistic>
 
                     <Statistic>
-                    <Statistic.Value>
-                        <Icon name='car' inline />
-                    </Statistic.Value>
-                    <Statistic.Label>{this.state.vehicle.license}</Statistic.Label>
+                        <Statistic.Value>
+                            <Icon name='car' inline />
+                        </Statistic.Value>
+                        <Statistic.Label>{this.state.vehicle.make} {this.state.vehicle.model}</Statistic.Label>
                     </Statistic>
 
                 </Statistic.Group>
