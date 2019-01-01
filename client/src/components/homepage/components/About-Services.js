@@ -10,8 +10,8 @@ const AboutServices = () =>{
     return(
 
         <Container style={{marginTop: "50px"}}>
-            <Grid columns={3}>
-                <Grid.Row>
+            <Grid columns={3}centered stackable>
+                <Grid.Row centered>
 
                     <Grid.Column>
                         <Segment placeholder color='blue'  style={{minHeight: '550px', paddingBottom: '15px'}}>
