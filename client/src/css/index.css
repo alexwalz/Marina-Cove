@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab');
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Slab', serif; */
+
+h1, h2, h3, h4, h5{
+  font-family: 'Roboto Slab', serif; 
+}
+
+.header{
+  font-family: 'Roboto Slab', serif!important;
+  color: #1E1E1E; 
+}
+
+p{
+  font-family: 'Open Sans', sans-serif!important;
+  color: "lightgrey"!important;
 }

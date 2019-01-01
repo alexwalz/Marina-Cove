@@ -24,21 +24,21 @@ class App extends Component {
     return (
           <div>
             <Switch>
-              <Route path="/" exact component={HomePage} />
-              <Route path="/login" exact component={Login} />
-              <Route path="/about" exact component={AboutUs} />
-              <Route path="/boat-storage" exact component={BoatStorage} />
-              <Route path="/rv-storage" exact component={RVStorage} />
-              <Route path="/self-storage" exact component={SelfStorage} />
-              <Route path="/signup" exact component={Signup} />
-              <Route path="/forgot-password" exact component={ForgotPasswordEmail} />
-              <Route path="/password-reset/:id" component={ResetPassword} />
-              <Route path="/profile" component={Profile} />
-              <Route path="/expired-link" component={ExpiredLink} />
-              <Route path='/confirm/:id' component={ConfirmPage} />
-              <Route path='/404' component={NotFound} />
-              <Route path='/401' component={unauthenticated}/>
-              <Route component={NotFound} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/" exact component={HomePage} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/login" exact component={Login} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/about" exact component={AboutUs} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/boat-storage" exact component={BoatStorage} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/rv-storage" exact component={RVStorage} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/self-storage" exact component={SelfStorage} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/signup" exact component={Signup} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/forgot-password" exact component={ForgotPasswordEmail} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/password-reset/:id" component={ResetPassword} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/profile" component={Profile} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/expired-link" component={ExpiredLink} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path='/confirm/:id' component={ConfirmPage} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path='/404' component={NotFound} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path='/401' component={unauthenticated}/>
+              <Route onUpdate={() => window.scrollTo(0, 0)} component={NotFound} />
             </Switch>
           </div>
     );

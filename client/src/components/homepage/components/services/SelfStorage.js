@@ -1,11 +1,11 @@
 import React from 'react'
-import {Image, Grid, Container} from 'semantic-ui-react'
+import {Image, Grid, Container, Header} from 'semantic-ui-react'
 import Navbar from '../../../global/navigation/View'
 import bannerImage from '../../../../images/self_storage_utah.jpg'
 import servicesDivider from '../../../../images/marina-cove-services_divider_alpha.png'
 import Footer from '../../../global/navigation/Footer'
 import StorageCard from './StorageCard'
-import {Link} from 'react-router-dom'
+import logo from '../../../../images/MARINA-COVE-260x315.png'
 
 
 const SelfStorage =()=>{
@@ -16,20 +16,49 @@ const SelfStorage =()=>{
             <Image src={bannerImage} centered style={{paddingTop: "120px"}}/>
             <Image src={servicesDivider} centered style={{padding: "20px 0px 0px 0px"}}/>
 
-            <div style={{marginTop: '100px', marginBottom: "100px"}}>
+            <div style={{marginTop: '50px'}}>
 
                 <Container>
-
-
-                    <div style={{padding: "0px 40px 60px 40px"}}>
-                        <p style={{fontSize: "1.5rem"}}>Here at Marina Cove, we offer a wide variety of storage options! Storing your boat and other vehicles is a 
-                            perfect way to keep them safe from months of snow and wind. <Link to='/boat-storage'>Boat Storage</Link> is simple and easy, and we’ll help 
-                            you every step of the way. If you’re wanting to store other <Link to='rv-storage'>large vehicles or RVs</Link> we offer storage options 
-                            for those as well, and if you’re just wanting to store a bunch of random stuff we have no problem with that! 
-                            Many people just don’t have room for everything, which is why we offer self-storage as well.</p>
+                    <div style={{paddingLeft: "15%", paddingRight: "15%"}}>
+                        <Header style={{fontSize: "2rem", color: "#1E1E1E", textAlign: "center"}}>If you own it, we have a place to store it</Header>
+                        <div style={{padding: "20px 0px 60px 0px"}}>
+                            <p style={{fontSize: "1.2rem", color: "lightgrey"}}> Our units are dry, clean, and secure to protect your valuable items that you place in them. We’re here to take care of your storage with the least hassle and worry possible!</p>
+                        </div>
                     </div>
 
-                    <Grid centered stackable>
+                    <Grid columns={3} stackable centered style={{marginTop: "100px", marginBottom: "160px"}}>
+                    
+                        <Grid.Row stretched centered>
+
+                            <Grid.Column>
+                                
+                               <Header style={{fontSize: "1.5rem"}}>24/7 Video Surveillance</Header>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+                               
+                               <Header style={{fontSize: "1.5rem"}}>24/7 Access</Header>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+                            </Grid.Column>
+
+                            <Grid.Column>
+
+                                <Image src={logo} centered/>
+
+                            </Grid.Column>
+
+                            <Grid.Column>
+
+                               <Header style={{fontSize: "1.5rem"}}>Onsite Property Management</Header>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+                               <Header style={{fontSize: "1.5rem"}}>Indoor Storage Unit</Header>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+
+                            </Grid.Column>
+
+                        </Grid.Row>
+
+                    </Grid>
+
+                    <Grid centered stackable style={{paddingBottom: "40px"}}>
 
                         <Grid.Row columns={3} centered>
 
