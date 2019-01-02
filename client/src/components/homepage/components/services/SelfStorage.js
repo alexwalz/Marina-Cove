@@ -33,10 +33,12 @@ const SelfStorage =()=>{
                             <Grid.Column>
                                 
                                <Header style={{fontSize: "1.5rem"}}>24/7 Video Surveillance</Header>
-                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Our facility is monitored 24/7 at all entrances and exits as well as throughout the compound.  We do this to help keep 
+                               your units safe from vandelism and theft.</p>
                                
                                <Header style={{fontSize: "1.5rem"}}>24/7 Access</Header>
-                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>We understand that people need access to their stuff at all hours of the day.  Because of this, we allow for 
+                               access to your storage unit at all hours of the day and night.</p>
                             </Grid.Column>
 
                             <Grid.Column>
@@ -48,9 +50,9 @@ const SelfStorage =()=>{
                             <Grid.Column>
 
                                <Header style={{fontSize: "1.5rem"}}>Onsite Property Management</Header>
-                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
-                               <Header style={{fontSize: "1.5rem"}}>Indoor Storage Unit</Header>
-                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Lorem ipsum dolor sit amet, graece impetus in usu, facer iracundia usu ea. Vero graeco ex cum, pri an assum fabellas, an eam forensibus rationibus. Quaeque probatus patrioque eum ei</p>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>Have questions, comments or conncerns?  No problem.  We have our staff onsite and are available to provide assistance during business hours.</p>
+                               <Header style={{fontSize: "1.5rem"}}>Indoor Storage Units</Header>
+                               <p style={{fontSize: "1.2rem", color: "lightgrey"}}>We know that people store more than just RV's and boats.  We offer indoor storage units that protect your stuf from natures harsh elements.</p>
 
                             </Grid.Column>
 
@@ -58,9 +60,12 @@ const SelfStorage =()=>{
 
                     </Grid>
 
-                    <Grid centered stackable style={{paddingBottom: "40px"}}>
+                    <Header style={{fontWeight: "bold", fontSize: "2.3rem"}}>Prices</Header>
+                    <hr/>
 
-                        <Grid.Row columns={3} centered>
+                    <Grid centered stackable columns={2} style={{paddingBottom: "40px", marginTop: "40px"}}>
+
+                        <Grid.Row columns={4} centered>
 
                             <Grid.Column centered>
                                 <StorageCard primaryColor='#121F2D' secondaryColor='#212F3E' title='Indoor Storage Units' subtitle="SIZE: 10'X10' BY 12' TALL" price='79.00' />
@@ -76,7 +81,7 @@ const SelfStorage =()=>{
 
                         </Grid.Row>
 
-                        <Grid.Row columns={3} centered>
+                        <Grid.Row columns={4} centered>
 
                             <Grid.Column>
                                 <StorageCard primaryColor='#121F2D' secondaryColor='#212F3E' title='Indoor Storage Units' subtitle="SIZE: 12'X40' BY 12' TALL" price='300.00' />

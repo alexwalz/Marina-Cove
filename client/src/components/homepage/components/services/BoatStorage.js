@@ -74,11 +74,13 @@ const BoatStorage =()=>{
 
                     </Grid>
 
+                <Header style={{fontWeight: "bold", fontSize: "2.3rem"}}>Prices</Header>
+                <hr/>
 
             
-                <Grid centered stackable style={{paddingBottom: "40px", marginTop: "100px"}}>
+                <Grid centered columns={2} stackable style={{paddingBottom: "40px", marginTop: "100px"}}>
 
-                    <Grid.Row columns={4} centered>
+                    <Grid.Row columns={3} centered>
 
                         <Grid.Column centered>
                             <StorageCard primaryColor='#121F2D' secondaryColor='#212F3E' title='Outdoor Storage' subtitle="25 Feet and Under" price='50.00' />
@@ -88,23 +90,19 @@ const BoatStorage =()=>{
                             <StorageCard primaryColor='#1F1F3C' secondaryColor='#2F2F4E' title='Outdoor Storage' subtitle="Over 25 Feet" price='75.00' />
                         </Grid.Column>
 
+                    </Grid.Row>
+ 
+                     <Grid.Row columns={3} centered>
+
                         <Grid.Column centered>
                             <StorageCard primaryColor='#1F1F2D' secondaryColor='#2F2F3E' title='Outdoor Storage' subtitle="Includes Boat Winterization" price='99.00' />
                         </Grid.Column>
 
                         <Grid.Column centered>
-                            <StorageCard primaryColor='#1F1F3C' secondaryColor='#2F2F4E' title='Indoor Storage' subtitle="Includes Free Spring Detail" price='250.00' />
-                        </Grid.Column>
+                             <StorageCard primaryColor='#1F1F3C' secondaryColor='#2F2F4E' title='Indoor Storage' subtitle="Includes Free Spring Detail" price='250.00' />
+                         </Grid.Column>
 
-                    </Grid.Row>
-{/* 
-                    <Grid.Row columns={3} centered>
-
-                        <Grid.Column centered>
-                            <StorageCard primaryColor='#1F1F3C' secondaryColor='#2F2F4E' title='Indoor Storage' subtitle="Includes Free Spring Detail" price='250.00' />
-                        </Grid.Column>
-
-                    </Grid.Row> */}
+                     </Grid.Row>
 
                 </Grid>
 
