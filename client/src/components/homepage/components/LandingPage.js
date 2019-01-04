@@ -21,7 +21,7 @@ class HomePage extends Component {
             <Image src={banner} fluid />
             </div>
             <div className='contact-button-container'>
-              <Button animated size='big' primary style={{paddingTop: "10px"}}>
+              <Button animated size='big' href='/contact' primary style={{paddingTop: "10px"}}>
                   <Button.Content visible>Contact Us</Button.Content>
                   <Button.Content hidden>
                       <Icon name='talk' />
