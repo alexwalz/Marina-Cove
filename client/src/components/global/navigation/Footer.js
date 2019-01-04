@@ -5,7 +5,7 @@ import Navbar from '../navigation/View'
 
 const Footer = ()=>{
     return(
-        <div style={{postion: "relative", width: "100%", backgroundColor: "#1E1E1E"}}>
+        <div style={{postion: "relative", width: "100%", backgroundColor: "#1E1E1E", textAlign: "center"}}>
             <Grid columns='equal' style={{padding: "30px 40px 10px 40px"}}>
 
                 <Grid.Column>
@@ -20,7 +20,13 @@ const Footer = ()=>{
                             <p>American Fork, UT 84003</p>
                             <p>(801) 230-7452</p>
                         </div>
-                        <Button color='blue' inverted href='https://goo.gl/maps/V4rL4NMfnQu' target='_blank'>Get Directions</Button>
+                        
+                        <Button.Group>
+                            <Button color='blue' inverted href='https://goo.gl/maps/V4rL4NMfnQu' target='_blank'>Directions</Button>
+                            <Button.Or />
+                            <Button color='blue' inverted href='/contact' target='_blank'>Contact Us</Button>
+                        </Button.Group>
+)
                     </div>
                 </Grid.Column>
 

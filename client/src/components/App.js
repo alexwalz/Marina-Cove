@@ -15,6 +15,7 @@ import AboutUs from './homepage/components/AboutUs'
 import BoatStorage from './homepage/components/services/BoatStorage'
 import SelfStorage from './homepage/components/services/SelfStorage'
 import RVStorage from './homepage/components/services/RvStorage'
+import Contact from './homepage/components/Contact'
 
 
 
@@ -26,6 +27,7 @@ class App extends Component {
             <Switch>
               <Route onUpdate={() => window.scrollTo(0, 0)} path="/" exact component={HomePage} />
               <Route onUpdate={() => window.scrollTo(0, 0)} path="/login" exact component={Login} />
+              <Route onUpdate={() => window.scrollTo(0, 0)} path="/contact" exact component={Contact} />
               <Route onUpdate={() => window.scrollTo(0, 0)} path="/about" exact component={AboutUs} />
               <Route onUpdate={() => window.scrollTo(0, 0)} path="/boat-storage" exact component={BoatStorage} />
               <Route onUpdate={() => window.scrollTo(0, 0)} path="/rv-storage" exact component={RVStorage} />

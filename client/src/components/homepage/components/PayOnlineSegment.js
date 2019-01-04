@@ -12,7 +12,7 @@ const PayOnlineSegment =()=>{
                 </Header>
                 <br/>
 
-                <Button animated  href='https://emove.com/login/' target='_blank' primary style={{paddingTop: "10px"}}>
+                <Button size='large' animated  href='https://emove.com/login/' target='_blank' primary style={{paddingTop: "10px"}}>
                   <Button.Content visible>Pay Online</Button.Content>
                   <Button.Content hidden>
                       <Icon name='dollar sign' />

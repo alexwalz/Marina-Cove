@@ -45,8 +45,9 @@ export default class Navigation extends Component {
           name='features'
           active={activeItem === 'features'}
           onClick={this.handleItemClick}
+          href='https://emove.com/login/' target='_blank' 
         >
-          Blog
+          Pay Bill Online
         </Menu.Item>
 
         <Dropdown item simple text='Services' name='testimonials' active={activeItem === 'testimonials'} onClick={this.handleItemClick}>
