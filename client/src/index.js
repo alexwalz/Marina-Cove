@@ -7,13 +7,16 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './tools/store';
 import 'semantic-ui-css/semantic.min.css';
+import ScrollToTop from './components/global/ScrollToTop'
 
 
 ReactDOM.render((
   <Provider store={store}>
       <ConnectedRouter history={history}>
           <div id='app'>
-              <App />
+              <ScrollToTop>
+                    <App />
+              </ScrollToTop>
           </div>
       </ConnectedRouter>
   </Provider>
