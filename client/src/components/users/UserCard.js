@@ -23,7 +23,7 @@ const UserCard =(props)=>{
                     <Image floated='right' size='mini' src='https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-male2-512.png' />
                     <Card.Header>{props.user.firstName} {props.user.lastName}</Card.Header>
                     <Card.Meta style={{color: "#EF1B36"}}>{props.user.role === 'admin' ? <Icon name='star'/> : <Icon name='user'/>} {props.user.role.toUpperCase()}</Card.Meta>
-                    <Card.Meta style={{color: "#EF1B36"}}>{props.user.captainsClub ? <div><Icon name='star'/>Captains Club Member</div> : null}</Card.Meta>
+                    <Card.Meta style={{color: "#EF1B36"}}>{props.user.captainsClub ? <div><Icon name='star'/>Captains Club Member</div> : <div style={{padding: "10px"}}></div>}</Card.Meta>
                     <Card.Description style={{paddingTop: "20px"}}>
                         <Icon name='phone' />{props.user.phoneNumber}<br/><br/>
                         <Icon name='building' />{props.user.address}<br/>

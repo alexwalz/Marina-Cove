@@ -112,6 +112,21 @@ disableCaptainsClub=()=>{
     })
 }
 
+confirmEmail=()=>{
+    let _id = this.props.match.params.id
+    let currentComponent = this
+
+    axios.put('/api/users/'+_id, {active: true}).then(function(response){
+        if(response.status === 200){
+            currentComponent.setState((prevState, props) => ({
+                user: {
+                    ...prevState.user,
+                    active: true,
+                },
+            }));
+        }
+    }).catch(function(error){console.log(error)})
+}
 
 deleteUser =()=>{
 
@@ -167,6 +182,11 @@ deleteUser =()=>{
                                 
                                 {!this.state.user.captainsClub ?  
                                     <Button icon labelPosition='left' onClick={this.enableCaptainsClub} style={{backgroundColor: "#EF1B36", color: "white"}}><Icon name='star'/>Enable Captains Club</Button> 
+                                    : null
+                                }
+
+                                {!this.state.user.active ?  
+                                    <Button icon labelPosition='left' onClick={this.confirmEmail} style={{backgroundColor: "#EF1B36", color: "white"}}><Icon name='check'/>Confirm Email</Button> 
                                     : null
                                 }
 
