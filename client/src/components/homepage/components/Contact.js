@@ -2,7 +2,7 @@ import React, { Component} from 'react'
 import axios from 'axios'
 import Navbar from '../../global/navigation/View'
 import Footer from '../../global/navigation/Footer'
-import { Button, Form, Loader, Input, TextArea, Container, Header } from 'semantic-ui-react'
+import { Button, Form, Loader, Input, TextArea, Container, Header, Message } from 'semantic-ui-react'
 
 
 class ContactForm extends Component {
@@ -15,7 +15,8 @@ class ContactForm extends Component {
             phoneNumber: "",
             body: "",
             submitting: false,
-            message: ""
+            message: "",
+            success: false
 		}
     }
 
@@ -32,6 +33,17 @@ class ContactForm extends Component {
         });
     }
 
+    successMessage =()=>{
+        return(
+            <Message positive>
+            <Message.Header>Success!</Message.Header>
+            <p>
+              Your message has been sent to our team. You should hear back shortly.
+            </p>
+          </Message>
+        )
+    }
+
     handleSubmit=(e)=>{
 
         this.setState({submitting: true})
@@ -42,6 +54,9 @@ class ContactForm extends Component {
 
           .then((result) => {
             console.log(result)
+            if(result.status === 200){
+                this.setState({success: true})
+            }
           })
 
           .catch((error) => {
@@ -112,7 +127,8 @@ class ContactForm extends Component {
 
                     </Form>
 
-                    <Button onClick={this.handleSubmit}>Submit</Button>
+                    {this.state.submitting ? <Button type='submit' disabled={true} onClick={this.handleSubmit} style={{marginTop: "20px"}}><Loader size='big' active inverted/>Submitting</Button> : <Button onClick={this.handleSubmit} style={{marginTop: "20px"}}>Submit</Button>}
+                    {this.state.success ? this.successMessage() : null}
 
                 </Container>
 

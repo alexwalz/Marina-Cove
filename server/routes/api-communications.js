@@ -28,7 +28,7 @@ router.post('/contact', function(req, res) {
 
             let mailOptions = {
                 from: `"${req.body.firstName + " " + req.body.lastName}" <${req.body.email}>`, // sender address
-                to: `alexwalz@icloud.com`, // list of receivers
+                to: `${process.env.EMAIL_USER}`, // list of receivers
                 subject: 'Marina Cove Storage Contact Request', // Subject line
                 html: `<div>
                 <div style="height: 200px; background-color: #ef1b36; position: relative;">
@@ -63,7 +63,7 @@ router.post('/contact', function(req, res) {
                 if (error) {console.log(error)}
                 console.log('Message sent: %s', info.messageId);
                 console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
+                res.json({success: true, message: "Message Sent"})
             });
 
         });
