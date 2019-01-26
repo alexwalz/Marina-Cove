@@ -9,10 +9,10 @@ import locationPhoto from '../../../images/convenient_location-1.jpg'
 
 const AboutUs =()=>{
 
-    const quote1 = 'This is a quote about Marina Cove Storage'
-    const quote1Author = 'Ryan Walz'
+    const quote1 = 'Marina Cove Storage is everything you would expect in premium storage.  Great service, clean storage and convenient location.'
+    const quote1Author = 'Kurt Roberts'
 
-    const quote2 = 'This is another quote'
+    const quote2 = "Couldn't be happier with the service I recieve.  Friendly and knowledgeable staff."
     const quote2Author = 'Alex Walz'
 
 
