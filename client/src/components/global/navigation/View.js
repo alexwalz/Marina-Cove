@@ -71,6 +71,7 @@ export default class Navigation extends Component {
           name='contact'
           active={activeItem === 'contact'}
           onClick={this.handleItemClick}
+          href='/contact'
         >
           Contact Us
         </Menu.Item>
