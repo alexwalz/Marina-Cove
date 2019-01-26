@@ -81,7 +81,9 @@ class PaypalButton extends Component {
                 failsed: false,
                 error: false,
 
-            }));
+            }), function(){
+                window.location = '/profile'
+            });
 
             this.setState({payment: payment}, function(){
 
@@ -124,14 +126,14 @@ class PaypalButton extends Component {
             this.setState({error: true, success: false, cancel: false})
         }
  
-        let env = 'sandbox'; // you can set here to 'production' for production
+        let env = 'production'; // you can set here to 'production' for production
         let currency = 'USD'; // or you can set this value from your props or state
         let total = this.props.service.discount ? this.props.service.discountPrice : this.props.service.price; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
         // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
  
         const client = {
             sandbox:    'Af7r4dcqK_YPD3NvADi3Jzx7RUytrSxzPrMPcGaXPZ1g9Daqn3IKsPLX8Dn1QRzFbg29v_WgSce3qi7f',
-            production: 'YOUR-PRODUCTION-APP-ID',
+            production: 'AQS-hzd2Ebgp_i9uTzRjyH7qlnxK3hSHcGpIBqlFKwIU_ARijxTDdO4ao67rSNduPHkGQ2f0fNAilADn'
         }
           
 

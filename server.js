@@ -9,6 +9,7 @@ const db_url          = process.env.MONGODB_URI || config.dbUri
 const port            = process.env.PORT || 5000;
 
 require('./server/models').connect(db_url);
+require('dotenv').config()
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -49,6 +50,7 @@ const apiRoutesVehicles     	= require('./server/routes/api-vehicles');
 const apiRoutesPurchases    	= require('./server/routes/api-purchases');
 const apiRoutesAuth         	= require('./server/routes/api-auth');
 const apiRoutesVehicleStorage 	= require('./server/routes/api-vehicleStorage');
+const apiRoutesCommunications 	= require('./server/routes/api-communications');
 
 
 
@@ -59,6 +61,7 @@ app.use('/api/vehicles', apiRoutesVehicles);
 app.use('/api/purchases', apiRoutesPurchases);
 app.use('/api/auth', apiRoutesAuth);
 app.use('/api/vehicleStorage', apiRoutesVehicleStorage)
+app.use('/api/communications', apiRoutesCommunications)
 
 
 
