@@ -23,7 +23,9 @@ var allowedOrigins = [
     'https://marina-cove.herokuapp.com',
     'http://marina-cove.herokuapp.com',
     'http://marinacovestorage.com',
-    'https://marinacovestorage.com'
+    'https://marinacovestorage.com',
+    "http://www.marinacovestorage.com",
+    "https://www.marinacovestorage.com"
 ];
 
 
